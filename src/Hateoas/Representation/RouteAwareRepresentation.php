@@ -14,9 +14,6 @@ use JMS\Serializer\Annotation as Serializer;
  *          "expr(object.getRoute())",
  *          parameters = "expr(object.getParameters())",
  *          absolute = "expr(object.isAbsolute())"
- *      ),
- *      exclusion = @Hateoas\Exclusion(
- *          groups={"list", "detail"}
  *      )
  * )
  *
@@ -26,6 +23,7 @@ class RouteAwareRepresentation
 {
     /**
      * @Serializer\Inline
+     * @Serializer\Groups({"Default", "list"})
      * @Serializer\Expose
      */
     private $inline;
