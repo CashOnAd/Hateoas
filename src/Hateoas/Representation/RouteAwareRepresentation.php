@@ -14,6 +14,9 @@ use JMS\Serializer\Annotation as Serializer;
  *          "expr(object.getRoute())",
  *          parameters = "expr(object.getParameters())",
  *          absolute = "expr(object.isAbsolute())"
+ *      ),
+ *      exclusion = @Hateoas\Exclusion(
+ *          groups={"list", "detail"}
  *      )
  * )
  *

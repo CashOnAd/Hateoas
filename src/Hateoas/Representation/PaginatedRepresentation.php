@@ -15,6 +15,9 @@ use JMS\Serializer\Annotation as Serializer;
  *          "expr(object.getRoute())",
  *          parameters = "expr(object.getParameters(1))",
  *          absolute = "expr(object.isAbsolute())"
+ *      ),
+ *      exclusion = @Hateoas\Exclusion(
+ *          groups={"list", "detail"}
  *      )
  * )
  * @Hateoas\Relation(
@@ -25,7 +28,8 @@ use JMS\Serializer\Annotation as Serializer;
  *          absolute = "expr(object.isAbsolute())"
  *      ),
  *      exclusion = @Hateoas\Exclusion(
- *          excludeIf = "expr(object.getPages() === null)"
+ *          excludeIf = "expr(object.getPages() === null)",
+ *          groups={"list", "detail"}
  *      )
  * )
  * @Hateoas\Relation(
@@ -36,7 +40,8 @@ use JMS\Serializer\Annotation as Serializer;
  *          absolute = "expr(object.isAbsolute())"
  *      ),
  *      exclusion = @Hateoas\Exclusion(
- *          excludeIf = "expr(object.getPages() !== null && (object.getPage() + 1) > object.getPages())"
+ *          excludeIf = "expr(object.getPages() !== null && (object.getPage() + 1) > object.getPages())",
+ *          groups={"list", "detail"}
  *      )
  * )
  * @Hateoas\Relation(
@@ -47,7 +52,8 @@ use JMS\Serializer\Annotation as Serializer;
  *          absolute = "expr(object.isAbsolute())"
  *      ),
  *      exclusion = @Hateoas\Exclusion(
- *          excludeIf = "expr((object.getPage() - 1) < 1)"
+ *          excludeIf = "expr((object.getPage() - 1) < 1)",
+ *          groups={"list", "detail"}
  *      )
  * )
  *
