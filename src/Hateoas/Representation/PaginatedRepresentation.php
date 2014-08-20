@@ -66,6 +66,7 @@ class PaginatedRepresentation extends RouteAwareRepresentation
      *
      * @Serializer\Expose
      * @Serializer\XmlAttribute
+     * @Serializer\Groups({"list", "detail"})
      */
     private $page;
 
@@ -74,6 +75,7 @@ class PaginatedRepresentation extends RouteAwareRepresentation
      *
      * @Serializer\Expose
      * @Serializer\XmlAttribute
+     * @Serializer\Groups({"list", "detail"})
      */
     private $limit;
 
@@ -82,6 +84,7 @@ class PaginatedRepresentation extends RouteAwareRepresentation
      *
      * @Serializer\Expose
      * @Serializer\XmlAttribute
+     * @Serializer\Groups({"list", "detail"})
      */
     private $pages;
 
@@ -90,6 +93,7 @@ class PaginatedRepresentation extends RouteAwareRepresentation
      *
      * @Serializer\Expose
      * @Serializer\XmlAttribute
+     * @Serializer\Groups({"list", "detail"})
      */
     private $total;
 
